@@ -1,0 +1,92 @@
+<div>
+  <div class='actions'>
+    <h3>Actions</h3>
+    <p>
+      <button class='btn center-on-node'>Center viewport on node</button>
+    </p>
+  </div>
+
+  <div class='details'>
+    <h2>Cluster Details <span style="font-size:0.7em">(node id: <span class='node_id'></span>)</span></h2>
+
+    <!-- histogram -->
+    <div class='histogram-wrapper'>
+      <hr><br/>
+
+      <h3><span class='distribution_label'></span> Distribution</h3>
+
+      <div class="histogram"></div>
+
+      <br><br>
+    </div>
+    <!-- /histogram -->
+
+    <!-- Projection Statistics -->
+    <div class='projection_stats' style='display:none'>
+
+      <hr><br/>
+
+      <h3>Projection Statistics</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Lens</th>
+            <th style="width:50px;"><small>Mean</small></th>
+            <th style="width:50px;"><small>Max</small></th>
+            <th style="width:50px;"><small>Min</small></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Cluster Statistics -->
+    <div class='cluster_stats'>
+        <hr><br/>
+
+        <h3>Cluster Statistics</h3>
+        <div class='above-wrapper'>
+            <h3>Above Average</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th style="width:50px;"><small>Mean</small></th>
+                  <th style="width:50px;"><small>STD</small></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+        </div>
+
+        <div class='below-wrapper'>
+            <h3>Below Average</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th style="width:50px;"><small>Mean</small></th>
+                  <th style="width:50px;"><small>STD</small></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+        </div>
+
+        <h3>Size</h3>
+        <p class='cluster-size'></p>
+    </div>
+
+    <!-- Membership information -->
+    <div class='membership-information'>
+      <hr> <br/>
+
+      <h3>Members</h3>
+      <div class='list-of-members'></div>
+
+      <br><br>
+      <hr><br>
+    </div>
+    <!-- /membership information -->
+  </div>
+</div>
