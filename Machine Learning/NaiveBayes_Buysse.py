@@ -8,6 +8,7 @@ import random
 # Import Gaussian Naive Bayes classifier:
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
+from sklearn.naive_bayes import CategoricalNB
 
 ## read in the data setting the first column as the index
 dat = pd.read_csv("HRT841_3genes_test.csv", index_col=0)
@@ -30,12 +31,25 @@ train, test, train_tissue, test_tissue = train_test_split(xdata, y_tissues, test
 
 # Initialize classifier:
 gnb = GaussianNB()
+cnb = CategoricalNB()
 
 # Train the classifier:
 model = gnb.fit(train, train_tissue)
+model2 = cnb.fit(train, train_tissue)
 # Make predictions with the classifier:
 predictive_tissues = gnb.predict(test)
+pred_2 = cnb.predict(test)
 print(predictive_tissues)
 
 # Evaluate label (subsets) accuracy:
 print(accuracy_score(test_tissue, predictive_tissues))
+
+print("GaussianNB: Number of mislabeled points out of a total %d points : %d"
+      % (test.shape[0], (test_tissue != predictive_tissues).sum()))
+
+print(accuracy_score(test_tissue, pred_2))
+
+print("CateboricalNB: Number of mislabeled points out of a total %d points : %d"
+      % (test.shape[0], (test_tissue != pred_2).sum()))
+
+#potential issue that I am using Gaussian but I doubt we have normally distributed data
