@@ -2,7 +2,7 @@ files for gene coexpression network group
 
 subset.ipynb is my method of making a subset from the metadata & should output a functional bash line for retreiving your subset from the original data. I spent way too much time on this but it should be very easy to use & making it helped me get more comfy with python & pandas.
 
-subset.py is a stripped down script from the subset.ipynb notebook that uses serial filtering to save resources
+subset.py is a stripped down script from the subset.ipynb notebook with parameter variables declared at the beginning for convenience
 please use it (remember to adjust parameters & output file name)
 
 fpkm_filtering.ipynb shows how I filtered data for WGCNA. the ~filtering by low expression across samples~ might be useful for other groups, just don't use the log transform part 
