@@ -21,14 +21,14 @@ meta_by_umr=meta[meta["UniqueMappedRate"] > umr_thresh]
 #just for reference, how many samples made it past that cut?
 complete=len(meta)
 by_umr=len(meta_by_umr)
-print(complete, "samples reduced to", by_umr, "by filtering unique mapped read rate\nTotal number of samples reduced by ",((1-(by_umr/complete))*100),"%.")
+print(complete, "samples reduced to", by_umr, "by filtering unique mapped read rate\nTotal number of samples reduced by ",((1-(by_umr/complete))*100),"%.\n")
 
 ### filter by ecotype
 meta_by_eco=meta_by_umr[meta_by_umr["Ecotype"].astype(str).str.fullmatch(eco_to_keep)] 
 print("subset ecotype name(s):\n", meta_by_eco["Ecotype"].value_counts()) #print what's in the resulting df to check that it worked
 ### samples left
 by_eco=len(meta_by_eco)
-print(by_umr, "samples reduced to", by_eco, "after filtering by ecotype\nnumber of samples reduced by ",((1-(by_eco/by_umr))*100),"%.")
+print("\n", by_umr, "samples reduced to", by_eco, "after filtering by ecotype\nnumber of samples reduced by ",((1-(by_eco/by_umr))*100),"%.")
 
 ### filter by genotype
 meta_by_geno=meta_by_umr[meta_by_umr["Genotype"].astype(str).str.fullmatch(geno_to_keep)] 
@@ -66,7 +66,7 @@ subindx2=subset_index+1 # +1 bc awk starts at 1 & first column is geneIDs
 indx=subindx2.astype(str).tolist() #make it a list of strings so we can format it how awk likes
 awk_index = ["$"+ n for n in indx] #add $ to index for awk (i think this tells it to pick columns? not sure tbh)
 
-print("bash code for this subset is:\nawk -F, \'{OFS=\",\";print $1,", ', '.join(awk_index), "}\' gene_FPKM_200501.csv > subset.csv") # print the whole bash cmd
+print("\n bash code for this subset is:\nawk -F, \'{OFS=\",\";print $1,", ', '.join(awk_index), "}\' gene_FPKM_200501.csv > subset.csv") # print the whole bash cmd
 
 
 
