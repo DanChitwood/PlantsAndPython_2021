@@ -7,7 +7,7 @@ import random
 
 # Import Gaussian Naive Bayes classifier:
 from sklearn.naive_bayes import GaussianNB
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 ## read in the data setting the first column as the index
 # the 100 genes and 24 tissues dataset 9on github)
@@ -51,3 +51,15 @@ print("GaussianNB: Number of mislabeled points out of a total %d points : %d"
       % (test.shape[0], (test_tissue != predictive_tissues).sum()))
 
 # potential issue in choosing Gaussian. Do we have a prior expectation that the relationship of expression to tissue type would be normal?
+
+##### from Paulo's code for testing performance #####
+# In the field of machine learning and specifically the problem of statistical classification, 
+# a confusion matrix, also known as an error matrix
+
+# Each row of the matrix represents the instances in an actual class while each column 
+# represents the instances in a predicted class,
+
+print(confusion_matrix(test_tissue, predictive_tissues))
+
+
+print(classification_report(test_tissue, predictive_tissues)) 
