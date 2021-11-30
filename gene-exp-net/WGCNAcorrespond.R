@@ -33,7 +33,7 @@ root_net <- blockwiseModules(root_data_t,power=8,
                              verbose = 3)
 # plot dendrogram with colors of assigned modules
 root_mergedColors <- labels2colors(root_net$colors) # convert module labels to colors
-plotDendroAndColors(root_net$dendrograms[[1]],mergedColors[root_net$blockGenes[[1]]],
+plotDendroAndColors(root_net$dendrograms[[1]],root_mergedColors[root_net$blockGenes[[1]]],
                     "Module colors", dendroLabels = FALSE, hang=0.03, 
                     addGuide = TRUE, guideHang = 0.05)
 table(root_net$colors)
@@ -54,7 +54,7 @@ leaf_net <- blockwiseModules(leaf_data_t,power=8,
 
 # plot dendrogram with colors of assigned modules
 leaf_mergedColors <- labels2colors(leaf_net$colors) # convert module labels to colors
-plotDendroAndColors(leaf_net$dendrograms[[1]],mergedColors[leaf_net$blockGenes[[1]]],
+plotDendroAndColors(leaf_net$dendrograms[[1]],leaf_mergedColors[leaf_net$blockGenes[[1]]],
                     "Module colors", dendroLabels = FALSE, hang=0.03, 
                     addGuide = TRUE, guideHang = 0.05)
 table(leaf_net$colors)
