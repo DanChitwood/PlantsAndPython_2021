@@ -5,7 +5,7 @@
 - workflow for WCGNA should be: `subset.py` > obtain subset from `gene_FPKM_200501.csv` via bash script > `filter.py` > `sft_thresh.R` > `wgcna.R` or `wgcna_consensus.R`
 - can then do export to cytoscape stuff
 - alt workflow with subsets provided by other groups: `filter.py` > `sft_thresh.R` > `wgcna.R` or `wgcna_consensus.R`
-- note that making a consensus network requires an additional processing step to keep only genes that survived filter.py for both group a & group b 
+- note that making a consensus network requires an additional processing step to keep only genes that survived `filter.py` for both group a & group b 
 
 ## Files
 
@@ -27,12 +27,12 @@ please use it (remember to adjust parameters & output file name)
 	- logic is: compare each network to the consensus network & look at what's not included in the consensus
 	- this might be able to be played with a bit to make a dis-consensus network
 
-- `metafix.ipynb` is just documentation of how I generated the indexed metadata for subsetting. you should be fine to use the `indexed_meta.csv` file located at i`/mnt/research/HRT841_F21/Class_project/subsetsi` as input for the `subset.ipynb` workflow
+- `metafix.ipynb` is just documentation of how I generated the indexed metadata for subsetting. you should be fine to use the `indexed_meta.csv` file located at `/mnt/research/HRT841_F21/Class_project/subsets` as input for the `subset.ipynb` workflow
 
 
 ## Running R scripts on hpcc
 
-### Module setups
+Module setups:
 
 ```
 module purge
@@ -40,20 +40,20 @@ module load GCC/8.3.0 OpenMPI/3.1.4
 module load R/4.1
 ```
 
-### Install packages
-
-- open R 
+open R 
 
 ```
 R
 ```
-- then install requiered packages
+
+Then install requiered packages
+
 ```
 intstall.packages("BiocManager") #type yes so it installs to a local directory 
 BiocManager::install("WGCNA") # works best than install.packages("WGCNA") 
 q() # to exit R
 ```
-### Run script
+Run script
 
 ```
 Rscript SCRIPT_NAME.R
