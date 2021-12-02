@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # ### _Arabidopsis_ gene sequence expression mapper graph with centroid lens
-
+# 
 # **Imort useful packages / modules**
 
 # In[1]:
@@ -39,16 +39,9 @@ from IPython.display import IFrame
 # sys.path.append(projdir)
 
 
-# In[3]:
+# **Modules from Sourabh Palande files**
 
-
-# # Make sure your last path is the one were you have this script and your data
-# sys.path
-
-
-# **Modules from Sourabh's files**
-
-# In[4]:
+# In[2]:
 
 
 # # import helper_functions
@@ -64,22 +57,26 @@ import kmapper as km
 
 # **Import database**
 
-# In[5]:
+# In[3]:
 
 
-centroids = pd.read_csv("/mnt/home/f0103237/metadata_centroids_1000genes_19642samples.csv")
-# This database contains 1000 genes from the MapRateFiltered_v1.csv file in the CleanData HPCC directory
-# This database has tissue types labeled according to the hypothesis generation group classification
-# This database was made 24/Nov/21
+df = pd.read_csv("37336genes_11317samples_20tissues_tSNE-centroild-lens.csv")
+# This database has:
+# - tissue types labeled according to the hypothesis generation group classification
+# - euclidean distances of each coordinate t-SNE point to its respective tissue type centroid
+# - 37,336 genes from the tissue_type_dataframe_v1.csv file in the CleanData HPCC directory
+# - 11,316 Arabidopsis samples from the tissue_type_dataframe_v1.csv file in the CleanData HPCC directory
+# This database was made 01/Dec/21
+
+# NOTE: It takes about 30 minutes to load using 1 core, 1 node and 16GB in the HPCC
 
 
-# **Defining database as df**
+# **Exploring database**
 
-# In[6]:
+# In[4]:
 
 
-df = centroids # set dataframe
-df_name = 'centroids'
+df_name = 'Centroid_Lens_Database'
 print("The current dataframe name is:", df_name)
 print("rows, columns =", df.shape)
 print("number of elements =", df.size)
@@ -87,34 +84,34 @@ print("number of elements =", df.size)
 
 # **Subsetting gene expression columns**
 
-# In[25]:
+# In[79]:
 
 
-genes = list(df.columns[40:]) # create list with the gene names
-len(genes)
+genes = list(df.columns[11:-30]) # create list with the gene names (first gene is column 11 and last gene is column -30)
+len(genes) # check how many genes you're using (maximum is 37,336)
 
 
 # **Set factors and factors levels**
 
-# In[8]:
+# In[73]:
 
 
 factors = ['Tissue','VegetativeRepro','AboveBelow','Sample Type']
 levels = ['Root','Root','Below','knl2 mutant line (flowering buds)']
 
-# filter_by_factor, filter_by_level = ('Tissue', 'Root')
+filter_by_factor, filter_by_level = ('Tissue', 'Root')
 # filter_by_factor, filter_by_level = ('VegetativeRepro', 'Root')
 # filter_by_factor, filter_by_level = ('AboveBelow', 'Below')
-filter_by_factor, filter_by_level = ('SampleName', 'knl2 mutant line (flowering buds)')
+# filter_by_factor, filter_by_level = ('SampleName', 'knl2 mutant line (flowering buds)')
 
-color_by_factor, color_by_level = ('Tissue', 'Root')
+# color_by_factor, color_by_level = ('Tissue', 'Root')
 # color_by_factor, color_by_level = ('VegetativeRepro', 'Root')
-# color_by_factor, color_by_level = ('AboveBelow', 'Below')
+color_by_factor, color_by_level = ('AboveBelow', 'Below')
 
 
 # **Initialize a KeplerMapper object**
 
-# In[9]:
+# In[74]:
 
 
 # Initialize mapper object
@@ -128,33 +125,24 @@ nerve = km.GraphNerve(min_intersection=1)
 # 
 # According to Dan's description: _"take the centroid/median of each tissue cluster, and the lens is the eucledian distance of each sample to its respective tissue center"_
 
-# In[10]:
+# In[75]:
 
 
 # Centroid lens
 Clens = df["eucl_dist"] # the euclidean distances are found in the "eucl_dist" column
 lens_type = 'Centroid'
-# plt.plot(Clens) # plot the lens to see how well represents the data
-
-
-# In[ ]:
-
-
-# # Multiple centroids lens
-# CNTRDSlens = df.iloc[:, 20:22]
-# lens_type = "MultipleCentroids"
-# plt.plot(CNTRDSlens)
+#plt.plot(Clens) # plot the lens to see how well represents the data
 
 
 # **Define cover:**
 # 
-# Overlap must be between 0 and 100. Intervals must be less than 130.
+# Overlap must be between 0 and 100. Intervals must be less than 90: try between 25 to 85.
 
-# In[18]:
+# In[76]:
 
 
 # Define cover
-cubes, overlap = (100, 90) # cubes = intervals
+cubes, overlap = (100, 75) # cubes = intervals
 cover = km.cover.Cover(n_cubes=cubes, perc_overlap=overlap/100.)
 
 
@@ -162,7 +150,7 @@ cover = km.cover.Cover(n_cubes=cubes, perc_overlap=overlap/100.)
 # 
 # DBSCAN with default parameters. Metric: correlation distance (1 - correlation) between a pair of gene expression profiles.
 
-# In[19]:
+# In[77]:
 
 
 # Define clustering algorithm
@@ -174,7 +162,7 @@ clusterer = DBSCAN(metric=clust_metric)
 # 
 # Keep an eye on the number of hypercubes, nodes and edges reported by the algorithm. You can change the graph size by changing the cover parameters.
 
-# In[20]:
+# In[78]:
 
 
 # Create mapper 'graph' with nodes, edges and meta-information.
@@ -189,7 +177,7 @@ graph = mymapper.map(lens=Clens,
 
 # **Kmapper coloring**
 
-# In[21]:
+# In[80]:
 
 
 # Color nodes by specified color_by_factor, color_by_level
@@ -201,7 +189,7 @@ cscale = colorscale_from_matplotlib_cmap(plt.get_cmap('coolwarm'))
 
 # **Set coloring levels as kmapper tooltips**
 
-# In[22]:
+# In[81]:
 
 
 # show color_by_factor levels in tooltip
@@ -234,7 +222,7 @@ figtitle = 'Lens type: {}, Tips {}, Color by {} ({}), Database: {}, intervals {}
                                                                                                               overlap/100.0,
                                                                                                               len(genes))
 
-fpath = '/mnt/home/f0103237/' + fname # is this synthax correct if I run it in the HPCC?
+fpath = '/mnt/home/f0103237/SLURM_mapper_outputs/' + fname # is this synthax correct if I run it in the HPCC?
 
 # Create visualization and save to specified file
 _ = mymapper.visualize(graph,
@@ -247,10 +235,4 @@ _ = mymapper.visualize(graph,
 
 # Load the html output file
 IFrame(src=fpath, width=1000, height=800)
-
-
-# In[ ]:
-
-
-
 
