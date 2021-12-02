@@ -60,7 +60,7 @@ import kmapper as km
 # In[3]:
 
 
-df = pd.read_csv("37336genes_11317samples_20tissues_tSNE-centroild-lens.csv")
+df = pd.read_csv("37336genes_11317samples_20tissues_tSNE-centroid-lens.csv")
 # This database has:
 # - tissue types labeled according to the hypothesis generation group classification
 # - euclidean distances of each coordinate t-SNE point to its respective tissue type centroid
