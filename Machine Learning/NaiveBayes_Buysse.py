@@ -1,4 +1,8 @@
-## Python script to use Naive Bayes on the 3 gene test data
+## Python script to use Naive Bayes
+## HAS NOT BEEN UPDATED TO USE THE TISSUE SUBSET FROM GROUP TWO
+## this document uses a subset of 100 genes and 24 tissue types made by Harry
+
+## Author: Sophie Buysse with some code from Paulo to look at accuracy
 
 ## import required packages
 import pandas as pd
