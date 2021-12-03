@@ -34,10 +34,13 @@ def get_data(label="Tissue"):
     tuple
         X_train, Y_
     """
-    df = pd.read_excel('subset_tissue.xlsx', engine='openpyxl')
+    # df = pd.read_excel('subset_tissue.xlsx', engine='openpyxl')
+    df = pd.read_csv("result_table_100_24_tissues.csv")
 
-    print("\nLabel Distribution:\n------------------")
+    print("\nLabel Distribution:\n-------------------")
     print(df['Tissue'].value_counts(), "\n")
+
+    print("Total number of Samples:", df.shape[0], "\n")
 
     features = df.iloc[:, 2:102].values
     labels = df[label].values
@@ -76,7 +79,8 @@ def fit_logistic(X_train, y_train, X_test, y_test, penalty="l2"):
     reg_strength = [1e-3, 1e-2, 1e-1, 1, 1e2, 1e3]
 
     print(f"Fitting logistic regression with {penalty} penalty...")
-    model = LogisticRegressionCV(Cs=reg_strength, cv=5, max_iter=1000, random_state=42).fit(X_train, y_train)
+
+    model = LogisticRegressionCV(Cs=reg_strength, cv=5, max_iter=250, random_state=42).fit(X_train, y_train)
 
     eval_model(model, X_test, y_test)
 
@@ -85,8 +89,10 @@ def fit_logistic(X_train, y_train, X_test, y_test, penalty="l2"):
 def main():
     X_train, y_train, X_test, y_test = get_data()
 
-    for p in ['l1', 'l2', 'elasticnet']:
-        fit_logistic(X_train, y_train, X_test, y_test, penalty=p)
+    # for p in ['l1', 'l2', 'elasticnet']:
+    #     fit_logistic(X_train, y_train, X_test, y_test, penalty=p)
+
+    fit_logistic(X_train, y_train, X_test, y_test, penalty='l1')
     
 
 if __name__ == "__main__":
