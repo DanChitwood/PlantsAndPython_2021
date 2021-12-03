@@ -1,4 +1,6 @@
 ## was that ~values as dates~ issue in the original data?
+## i don't think so
+## yes i use git improperly, but i find the web gui nice for writing code in ¯\_(ツ)_/¯
 
 import pandas as pd
 
