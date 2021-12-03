@@ -13,9 +13,9 @@ library(tidyr)
 
 
 ### setup
-sft_thresh_a= 6   #initialize soft thresholding power variables
-sft_thresh_b= 6
-sft_thresh_cons= 6
+sft_thresh_a= 8   #initialize soft thresholding power variables
+sft_thresh_b= 8
+sft_thresh_cons= 8
 minModuleSize= 30   # initialize minimum module size variable (>x genes, 30 recommended by WGCNA tutorial)
 #colors= c("#0f0f12", "#505359", "#b6bfbc", "#f2fbff", “#5ee7ff", "#00a1db", "#1d5bb8", "#1f2c66", "#1b5245", "#2e8f46", "#58d92e", "#cbff70", "#ffff8f", "#ffdf2b", "#f0771a", "#e32239", "#851540", "#401a24", "#9c3b30", "#3929cc", "#8a5cff", "#ffbca6", "#eb75be", "#77388c”)   # 24x custom color init, trying to make it more readable
 options(stringsAsFactors=  F)   # WGCNA req
@@ -47,12 +47,12 @@ names(data_b)=   b_gene_names
 # build network from Subset A & identify modules 
 # soft thresh & minimum module size are initialized in setup section
 adj_a= adjacency(data_a, power= sft_thresh_a)   # defines adjacency
-tom_a= TOMsimilarityFromExpr(adj_a)   # turns adjacency into topological overlap matrix
+tom_a= TOMsimilarity(adj_a)   # turns adjacency into topological overlap matrix
 tom_a_diss= 1-tom_a   # dissimilarity from similarity
 dend_a= hclust(as.dist(tom_a_diss),method= "average")   # make dendrogram
 modlabels_a= cutreeDynamic(dendro=  dend_a, distM=  tom_a_diss, deepSplit=  1, pamRespectsDendro=  FALSE, minClusterSize=  minModuleSize)   # determine modules & list module label for each gene
 modcolors_a= labels2colors(modlabels_a)   # makes the colors for the dendrogram #convert label list to color list
-cutheight_a= dynamicMergeCut(length(names(data_a_long))-1,0.9,2.35)   # function to select cut height using merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
+cutheight_a= dynamicMergeCut(length(names(data_a_long))-1,0.8,2.35)   # function to select cut height using sample size, merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
 merge_a= mergeCloseModules(data_a, modlabels_a, cutHeight= cutheight_a, verbose= 3)   # function to merge modules with similar expression profiles
 modlabels_merged_a= merge_a$colors   # module labels for each gene after merge
 modcolors_merged_a=labels2colors(modlabels_merged_a)   # convert to list of colors
@@ -74,12 +74,12 @@ dev.off()
 ### build network from Subset B & identify modules 
 # soft thresh & minimum module size are initialized in setup section
 adj_b= adjacency(data_b, power= sft_thresh_b)   # defines adjacency
-tom_b= TOMsimilarityFromExpr(adj_b)   # turns adjacency into topological overlap matrix
+tom_b= TOMsimilarity(adj_b)   # turns adjacency into topological overlap matrix
 tom_b_diss= 1-tom_b   # dissimilarity from similarity
 dend_b= hclust(as.dist(tom_b_diss),method= "average")   # make dendrogram
 modlabels_b= cutreeDynamic(dendro=  dend_b, distM=  tom_b_diss, deepSplit=  1, pamRespectsDendro=  FALSE, minClusterSize=  minModuleSize)   # determine modules & list module label for each gene
 modcolors_b= labels2colors(modlabels_b)   # makes the colors for the dendrogram #convert label list to color list
-cutheight_b= dynamicMergeCut(length(names(data_b_long))-1,0.9,2.35)   # function to select cut height using merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
+cutheight_b= dynamicMergeCut(length(names(data_b_long))-1,0.8,2.35)   # function to select cut height using merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
 merge_b= mergeCloseModules(data_b, modlabels_b, cutHeight= cutheight_b, verbose= 3)   # function to merge modules with similar expression profiles
 modlabels_merged_b= merge_b$colors   # module labels for each gene after merge
 modcolors_merged_b=labels2colors(modlabels_merged_b)   # convert to list of colors
@@ -122,7 +122,7 @@ dend_cons= hclust(as.dist(tom_cons_diss),method= "average")   #make dendrogram
 modlabels_cons= cutreeDynamic(dendro=dend_cons, distM=tom_cons_diss, deepSplit=  1, pamRespectsDendro=  FALSE, minClusterSize=  minModuleSize)    #construct modules & list module label for each gene
 modcolors_cons= labels2colors(modlabels_cons)
 shorter=ifelse(length(names(data_a_long))>length(names(data_b_long)),length(names(data_b_long))-1,length(names(data_a_long))-1)   #use smaller of subset sample size for cutheight
-cutheight_cons= dynamicMergeCut(shorter,0.9,2.35)
+cutheight_cons= dynamicMergeCut(shorter,0.8,2.35)
 merge_cons= mergeCloseModules(multiExpr,modlabels_cons,cutHeight= cutheight_cons,verbose= 3)
 modlabels_merged_cons= merge_cons$colors
 modcolors_merged_cons= labels2colors(modlabels_merged_cons)
