@@ -1,18 +1,19 @@
-README
+# README
+
 ================================================
+- Jeremy Arsenault
 
-Jeremy Arsenault
+- Francisco Guerra
 
-Francisco Guerra
+- Nick Johnson
 
-Nick Johnson
+- Quintero Corrales Christian
 
-Quintero Corrales Christian
+- Anne Steensma
 
-Anne Steensma
+- Damián Villaseñor Amador
+=================================================
 
-Damián Villaseñor Amador
- =================================================
 
 This repository contains all scripts used tp generate a mapper graph usign RNAseq data from Arabidopsis.
 
