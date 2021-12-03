@@ -46,7 +46,8 @@ please use it (remember to adjust parameters & output file name)
 	- converting was super helpful in getting more comfotrable with python though
 	- seriously don't use this, the python version is much better
 
-- `metafix.ipynb` is just documentation of how I generated the indexed metadata for subsetting. you should be fine to use the `indexed_meta.csv` file located at `/mnt/research/HRT841_F21/Class_project/subsets` as input for the `subset.ipynb` workflow
+- `metafix.ipynb` is just documentation of how I generated the indexed metadata for subsetting. 
+	- you should be fine to use the `indexed_meta.csv` file located at `/mnt/research/HRT841_F21/Class_project/subsets` as input for the `subset.ipynb` workflow
 
 
 ## Running R scripts on hpcc
