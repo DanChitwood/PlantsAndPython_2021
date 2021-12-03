@@ -52,7 +52,7 @@ tom_a_diss= 1-tom_a   # dissimilarity from similarity
 dend_a= hclust(as.dist(tom_a_diss),method= "average")   # make dendrogram
 modlabels_a= cutreeDynamic(dendro=  dend_a, distM=  tom_a_diss, deepSplit=  1, pamRespectsDendro=  FALSE, minClusterSize=  minModuleSize)   # determine modules & list module label for each gene
 modcolors_a= labels2colors(modlabels_a)   # makes the colors for the dendrogram #convert label list to color list
-cutheight_a= dynamicMergeCut(length(names(data_a_long))-1,0.8,2.35)   # function to select cut height using sample size, merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
+cutheight_a= dynamicMergeCut(length(names(data_a_long))-1,0.85,2.35)   # function to select cut height using sample size, merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
 merge_a= mergeCloseModules(data_a, modlabels_a, cutHeight= cutheight_a, verbose= 3)   # function to merge modules with similar expression profiles
 modlabels_merged_a= merge_a$colors   # module labels for each gene after merge
 modcolors_merged_a=labels2colors(modlabels_merged_a)   # convert to list of colors
@@ -66,7 +66,8 @@ a_colors= modcolors_merged_a
 
 
 # output dendrogram with modules for Subset A
-pdf('dendro_a.pdf')
+pdf('dendro_a.pdf', wi=9, he=5)
+sizeGrWindow(12,9)
 plotDendroAndColors(dend_a, modcolors_merged_a, xlab= "Dynamic Tree Cut", dendroLabels= FALSE, hang= 0.03, addGuide= TRUE, guideHang= 0.05, main=  "Gene clustering on TOM-based dissimilarity with modules for Subset A")
 dev.off()
 
@@ -79,7 +80,7 @@ tom_b_diss= 1-tom_b   # dissimilarity from similarity
 dend_b= hclust(as.dist(tom_b_diss),method= "average")   # make dendrogram
 modlabels_b= cutreeDynamic(dendro=  dend_b, distM=  tom_b_diss, deepSplit=  1, pamRespectsDendro=  FALSE, minClusterSize=  minModuleSize)   # determine modules & list module label for each gene
 modcolors_b= labels2colors(modlabels_b)   # makes the colors for the dendrogram #convert label list to color list
-cutheight_b= dynamicMergeCut(length(names(data_b_long))-1,0.8,2.35)   # function to select cut height using merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
+cutheight_b= dynamicMergeCut(length(names(data_b_long))-1,0.85,2.35)   # function to select cut height using merge correlation & z statistic // tutorial uses set values chosen based on visual inspection of the dendrograms but this function is available & seems to have good output but my stats knowledge is a bit lacking for determining whether it’s used appropriately
 merge_b= mergeCloseModules(data_b, modlabels_b, cutHeight= cutheight_b, verbose= 3)   # function to merge modules with similar expression profiles
 modlabels_merged_b= merge_b$colors   # module labels for each gene after merge
 modcolors_merged_b=labels2colors(modlabels_merged_b)   # convert to list of colors
@@ -92,7 +93,8 @@ b_mods=  labels2colors(as.numeric(b_labs)) #list of strings containing color val
 b_colors= modcolors_merged_b
 
 # output dendrogram with modules for Subset B
-pdf('dendro_b.pdf')
+pdf('dendro_b.pdf', wi=9, he=6)
+sizeGrWindow(12,9)
 plotDendroAndColors(dend_b, modcolors_merged_b, xlab= "Dynamic Tree Cut", dendroLabels= FALSE, hang= 0.03, addGuide= TRUE, guideHang= 0.05, main=  "Gene clustering on TOM-based dissimilarity with modules for Subset B")
 dev.off()
 
@@ -134,7 +136,8 @@ cons_labs=  substring(names(cons_eigens[[1]]$data),3) #list nimeric labels for e
 cons_mods=  labels2colors(as.numeric(cons_labs)) #list of strings containing color value for each *gene*
 cons_colors=modcolors_merged_cons
 
-pdf('dendro_cons.pdf')
+pdf('dendro_cons.pdf', wi=9, he=6)
+sizeGrWindow(12,9)
 plotDendroAndColors(dend_cons, modcolors_merged_cons, xlab= "Dynamic Tree Cut", dendroLabels= FALSE, hang= 0.03, addGuide= TRUE, guideHang= 0.05, main=  "Gene clustering on TOM-based dissimilarity with modules for Consensus Module")
 dev.off()
 
@@ -153,6 +156,7 @@ eigendiss_cons= consensusMEDissimilarity(eigen_cons)
 eigentree_cons= hclust(as.dist(eigendiss_cons), method=  "average")
 
 pdf('merging.pdf')   #output pdf showing module merging & resulting dendrogram/module graph
+sizeGrWindow(12,9)
 plot(eigentree_a, main= "Clustering of Module Eigengenes for Subset A", xlab=  "", sub=  "")
 abline(h= cutheight_a, col= "red")
 plotDendroAndColors(dend_a, cbind(modcolors_a,modcolors_merged_a), c("Dynamic Tree Cut","Merged Dynamic"), dendroLabels= FALSE, hang= 0.03, addGuide= TRUE, guideHang= 0.05, main=  "Gene clustering on TOM-based dissimilarity with modules for Subset A")
@@ -227,7 +231,7 @@ labeledHeatmap(Matrix=  a_pTable,
                colorLabels=  TRUE,
                xSymbols=  paste("Consensus ", cons_mods, ": ", consa_ModTotals, sep= ""),
                ySymbols=  paste("Subest A ", a_mods, ": ", a_ModTotals, sep= ""),
-               textMatrix=  a_CountTbl,
+               #textMatrix=  a_CountTbl,
                colors=  greenWhiteRed(100)[50:100],
                main=  "Correspondence of Subset A modules vs Subset A/B Consensus modules",
                cex.text=  1.0, cex.lab=  1.0, setStdMargins=  FALSE)
@@ -237,7 +241,7 @@ labeledHeatmap(Matrix=  b_pTable,
                colorLabels=  TRUE,
                xSymbols=  paste("Consensus ", cons_mods, ": ", consb_ModTotals, sep= ""),
                ySymbols=  paste("Subset B ", b_mods, ": ", b_ModTotals, sep= ""),
-               textMatrix=  b_CountTbl,
+               #textMatrix=  b_CountTbl,
                colors=  greenWhiteRed(100)[50:100],
                main=  "Correspondence of Subset B modules vs Subset A/B Consensus modules",
                cex.text=  1.0, cex.lab=  1.0, setStdMargins=  FALSE)
