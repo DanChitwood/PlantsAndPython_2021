@@ -10,7 +10,7 @@ minModuleSize=30 #initialize minimum module size variable (>x genes, 30 recommen
 eigendiss_thresh=0.25 #merge modules where expression correlation of module eigengene is >1-x (WGCNA tutorial I part 2.b.5)
 #setwd('/home/beebo_bebop/HRT841 - Plants & Python') #disabled bc working from my home directory on hpcc
 options(stringsAsFactors = F) #WGCNA req
-data=read.csv(paste(file_name,'.csv',sep=''),nrows = 1000) #one type of tissue
+data=read.csv(paste(file_name,'.csv',sep='')) #one type of tissue
 
 enableWGCNAThreads() #need this in cli R but supposedly not studio
 
