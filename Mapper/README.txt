@@ -1,4 +1,4 @@
-*_Arabidopsis_ gene sequence expression mapper graph with centroid lens*
+Arabidopsis gene sequence expression mapper graph with centroid lens
 
 Jeremy Arsenault
 
