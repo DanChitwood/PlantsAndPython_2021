@@ -50,10 +50,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
 
 
 n_neighbors = 5 # K = 5
-random_state = 0 # what is this
 
 # Reduce dimension to 5 with PCA
-pca = make_pipeline(StandardScaler(), PCA(n_components=5, random_state=random_state))
+pca = make_pipeline(StandardScaler(), PCA(n_components=5))
 
 # Reduce dimension to 5 with LinearDiscriminantAnalysis
 lda = make_pipeline(StandardScaler(), LinearDiscriminantAnalysis(n_components=5))
@@ -61,7 +60,7 @@ lda = make_pipeline(StandardScaler(), LinearDiscriminantAnalysis(n_components=5)
 # Reduce dimension to 5 with NeighborhoodComponentAnalysis
 nca = make_pipeline(
     StandardScaler(),
-    NeighborhoodComponentsAnalysis(n_components=5, random_state=random_state),
+    NeighborhoodComponentsAnalysis(n_components=5),
 )
 
 # Use a nearest neighbor classifier to evaluate the methods
