@@ -1,0 +1,16 @@
+#!/bin/bash --login
+#SBATCH --time=1:00:00
+#SBATCH --ntasks=1
+#SBATCH --mem-per-cpu=50G
+#SBATCH --job-name UMAP_All
+#SBATCH --mail-user=waterm29@msu.edu
+#SBATCH --mail-type=END,FAIL
+
+module purge
+module load iccifort/2020.4.304
+module load impi/2019.9.304
+module load scikit-learn/0.23.2
+
+python UMAP_VegRepro.py
+
+scontrol show job $SLURM_JOB_ID
