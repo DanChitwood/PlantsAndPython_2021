@@ -13,7 +13,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler, normalize
 
 
-dataset = pd.read_excel('subset_tissue.xlsx')  
+dataset = pd.read_csv('result_table_100_24_tissues.csv')  
 
 
 # Use head() function to return the first 5 rows: 
@@ -40,9 +40,9 @@ X_test = scaler.transform(X_test)
 
 
 # Neural network
-clf = MLPClassifier(solver='lbfgs', alpha=1e-5, #optimizador lbfgs
-                    hidden_layer_sizes=(7,1), random_state=1)
+clf = MLPClassifier(solver='lbfgs', #optimizador lbfgs
+                    hidden_layer_sizes=(10,2), random_state=1)
 clf.fit(X_train, y_train)
 pred = clf.predict(X_test)
 cnf_matrix = confusion_matrix(y_test, pred)
-print('5 neurons 1 layer: ' + str(accuracy_score(y_test, pred)))
+print('10 neurons 2 layer: ' + str(accuracy_score(y_test, pred)))
