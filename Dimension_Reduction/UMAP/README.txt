@@ -1,7 +1,7 @@
 This folder contains all files related to UMAP within the Dimension Reduction group.
 Author: Robin Waterman
 
--------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Subsets : folder contains all files related to subsets of the data
 
 	UMAP_3gene.ipynb : for 3-gene subset, downloaded directly from the website, called "results_table.csv" in this folder
@@ -10,7 +10,7 @@ Subsets : folder contains all files related to subsets of the data
 	
 	UMAP_1000Gene.html, UMAP_1000Gene_2D.png, UMAP_1000Gene_3D.png : figure outputs from UMAP_tiny75 script
 
-------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Main: folder contains all files related to the full dataset
 
 	NoNA.py : python script for changing blank cells (NaN when read into pandas) in the categorical columns of "tissue_type_dataframe_v2.csv" into the string "Other_NA" and exporting as "tissue_type_df_v2_noblank.csv". Without this step, plotly fails to color by categories.
