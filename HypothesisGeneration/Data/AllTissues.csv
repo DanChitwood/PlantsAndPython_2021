@@ -1,0 +1,277 @@
+"RawName","Counts","Tissue","VegetativeRepro","AboveBelow","Debatable"
+"seedlings",4402,"Seedling","WholePlant","WholePlant",NA
+"leaves",3633,"Leaf","Vegetative","Above",NA
+"root",1662,"Root","Root","Below",NA
+"rosette leaf",1122,"Leaf","Vegetative","Above",NA
+"leaf",871,"Leaf","Vegetative","Above",NA
+"shoot",752,"Shoot","Vegetative","Above",NA
+"whole plant",707,"WholePlant","WholePlant","WholePlant",NA
+"seed",509,"Seed","Reproductive","Seed",NA
+"aerial seedling",426,"Seedling","WholePlant","WholePlant",NA
+"cotyledon",322,"Cotyledon","Vegetative","Above",NA
+"seedling",254,"Seedling","WholePlant","WholePlant",NA
+"hypocotyl",233,"Hypotocyl","Hypotocyl","Below",NA
+"inflorescence",230,"Inflorescence","Reproductive","Above",NA
+"aerial shoots",203,"Shoot","Vegetative","Above",NA
+"/",185,NA,NA,NA,NA
+"whole seedling",140,"Seedling","WholePlant","WholePlant",NA
+"flower bud",123,"Flower","Reproductive","Above",NA
+"root tip",110,"Root","Root","Below",NA
+"stem",110,"Shoot","Vegetative","Above",NA
+"whole organism",106,"WholePlant","WholePlant","WholePlant",NA
+"Leaf",104,"Leaf","Vegetative","Above",NA
+"ground tissue*",84,NA,NA,NA,NA
+"flower",81,"Flower","Reproductive","Above",NA
+"embryo",80,NA,NA,NA,NA
+"Whole seedlings",77,"Seedling","WholePlant","WholePlant",NA
+"shoot apex",77,"Shoot","Vegetative","Above",NA
+"Root",75,"Root","Root","Below",NA
+"rosette",75,"Leaf","Vegetative","Above",NA
+"rosette leaves",74,"Leaf","Vegetative","Above",NA
+"flower buds",69,"Flower","Reproductive","Above",NA
+"4-week old leaves",60,"Leaf","Vegetative","Above",NA
+"aerial tissues of 18 DAS plants",60,NA,NA,NA,NA
+"whole rosette",59,"Leaf","Vegetative","Above",NA
+"apical shoot meristem",57,"Shoot","Vegetative","Above",NA
+"Shoot",56,"Shoot","Vegetative","Above",NA
+"siliques",54,NA,NA,NA,NA
+"apical part",53,"Shoot","Vegetative","Above",NA
+"roots",52,"Root","Root","Below",NA
+"root protoplasts",51,"Root cell","Root","Below",NA
+"Three day old etiolated seedlings",48,"Seedling","WholePlant","WholePlant",NA
+"shoot apical meristem",48,NA,NA,NA,NA
+"apical meristem enriched",48,"Shoot","Vegetative","Above",NA
+"anther",47,"Anther","Reproductive","Above",NA
+"Seedlings",46,"Seedling","WholePlant","WholePlant",NA
+"flower receptacles",42,"Flower","Reproductive","Above",NA
+"Seedling",39,"Seedling","WholePlant","WholePlant",NA
+"Leaves",39,"Leaf","Vegetative","Above",NA
+"2-week seedlings",36,"Seedling","WholePlant","WholePlant",NA
+"aerial part",35,"Shoot","Vegetative","Above",NA
+"ovule",34,NA,NA,NA,NA
+"cultured cell",33,NA,NA,NA,NA
+"silique",33,NA,NA,NA,NA
+"seedings",32,NA,NA,NA,NA
+"shoots",31,"Shoot","Vegetative","Above",NA
+"whole plants",31,"WholePlant","WholePlant","WholePlant",NA
+"Rosette leaves",29,"Leaf","Vegetative","Above",NA
+"sepal",29,"Sepal","Reproductive","Above",NA
+"in vitro cotyledon",26,"Cotyledon","Vegetative","Above",NA
+"7 days old whole seedling",26,"Seedling","WholePlant","WholePlant",NA
+"leaf mesophyll",26,"Vasculature","Vegetative","Above",NA
+"12-day-old whole seedling tissue",25,"Seedling","WholePlant","WholePlant",NA
+"Rosette leaf",25,"Leaf","Vegetative","Above",NA
+"Dry seed",24,NA,NA,NA,NA
+"root and leaf",24,NA,NA,NA,NA
+"inflorescences composed of all unopened floral buds",24,"Inflorescence","Reproductive","Above",NA
+"12day seedlings",24,"Seedling","WholePlant","WholePlant",NA
+"apices",23,"Shoot","Vegetative","Above",NA
+"root QC cells",23,"Root cell","Root","Below",NA
+"pistils",23,"Pistil","Reproductive","Above",NA
+"internode",22,"Internode","Vegetative","Above",NA
+"endosperm",22,NA,NA,NA,NA
+"seedling shoot",21,"Seedling","WholePlant","WholePlant",NA
+"complete seedling",21,"Seedling","WholePlant","WholePlant",NA
+"shoot tip",21,"Shoot","Vegetative","Above",NA
+"Pollinated stigma",20,"Stigma","Reproductive","Above",NA
+"cell",19,NA,NA,NA,NA
+"leaf tissue",19,"Leaf","Vegetative","Above",NA
+"Inflorescence meristem",19,"Inflorescence","Reproductive","Above",NA
+"Hypocotyls",18,"Hypotocyl","Hypotocyl","Below",NA
+"6day seedlings",18,"Seedling","WholePlant","WholePlant",NA
+"gynoecia",18,"Reproductive- Other","Reproductive","Above",NA
+"pollen",17,NA,NA,NA,NA
+"Inflorescence tissues",17,NA,NA,NA,NA
+"petal",17,"Petal","Reproductive","Above",NA
+"whole root",16,"Root","Root","Below",NA
+"Flower",16,"Flower","Reproductive","Above",NA
+"7-day-old root tips",16,"Root","Root","Below",NA
+"plant callus",16,NA,NA,NA,NA
+"leave",16,"Leaf","Vegetative","Above",NA
+"1cm long root tips",16,"Root","Root","Below",NA
+"collet",16,NA,NA,NA,NA
+"complete rosette",15,"Leaf","Vegetative","Above",NA
+"10day seedling",15,"Seedling","WholePlant","WholePlant",NA
+"lower leaf epidermis",15,"Leaf","Vegetative","Above",NA
+"rosettes",15,"Leaf","Vegetative","Above",NA
+"root tips",15,"Root","Root","Below",NA
+"carpels",14,"Carpel","Reproductive","Above",NA
+"whole seedlings",13,"Seedling","WholePlant","WholePlant",NA
+"5DAG seedlings",13,"Seedling","WholePlant","WholePlant",NA
+"7-day old seedlings",12,"Seedling","WholePlant","WholePlant",NA
+"rozettes",12,"Leaf","Vegetative","Above",NA
+"zygote",12,NA,NA,NA,NA
+"4-d-old seedlings",12,"Seedling","WholePlant","WholePlant",NA
+"7 day-old seedlings",12,"Seedling","WholePlant","WholePlant",NA
+"pollen grains",12,NA,NA,NA,NA
+"Germinating seeds",12,"Seed","Reproductive",NA,NA
+"plant seedlings",12,"Seedling","WholePlant","WholePlant",NA
+"2weeks seedlings",12,"Seedling","WholePlant","WholePlant",NA
+"Aerial",11,"Shoot","Vegetative","Above",NA
+"growth points",11,NA,NA,NA,NA
+"2 week old seedlings",11,"Seedling","WholePlant","WholePlant",NA
+"root hair",11,"Root","Root","Below",NA
+"primary root",11,"Root","Root","Below",NA
+"Apical portions of plants (cut in hypocotyl)",11,"Root","Root","Below",NA
+"Whole seedling",11,"Seedling","WholePlant","WholePlant",NA
+"stigma",11,"Stigma","Reproductive","Above",NA
+"stamen",11,"Stamen","Reproductive","Above",NA
+"seedling root",10,"Seedling","WholePlant","WholePlant","Yes"
+"7-day-old whole seedling",10,"Seedling","WholePlant","WholePlant",NA
+"inflorescence (stage 1-12) immature flower buds",10,"Inflorescence","Reproductive","Above",NA
+"leaf petiole",10,"Petiole","Vegetative","Above",NA
+"etiolated seedlings",9,"Seedling","WholePlant","WholePlant",NA
+"Endosperm",9,NA,NA,NA,NA
+"stamens",9,"Stamen","Reproductive","Above",NA
+"apical hook",9,"Shoot","Vegetative","Above",NA
+"the whole plant",8,"WholePlant","WholePlant","WholePlant",NA
+"Inflorescence stem",8,"Inflorescence","Reproductive","Above",NA
+"siluge without seeds",8,"Seed","Reproductive",NA,NA
+"inflorescences",8,"Inflorescence","Reproductive","Above",NA
+"3 weeks old roots",8,NA,NA,NA,NA
+"meristems and young leaves",8,NA,NA,NA,NA
+"5-day-old whole seedlings",8,"Seedling","WholePlant","WholePlant",NA
+"leaf blade",8,"Leaf","Vegetative","Above",NA
+"Etiolated Cotyledon",8,"Cotyledon","Vegetative","Above",NA
+"10days seedlings",8,"Seedling","WholePlant","WholePlant",NA
+"leaf, stem, root",8,NA,NA,NA,NA
+"whole roots",8,"Root","Root","Below",NA
+"4day seedlings",8,"Seedling","WholePlant","WholePlant",NA
+"endodermis",7,NA,NA,NA,NA
+"5day whole seedlings",7,"Seedling","WholePlant","WholePlant",NA
+"pod",7,NA,NA,NA,NA
+"whole shoot",6,"Shoot","Vegetative","Above",NA
+"10-days Seedlings",6,"Seedling","WholePlant","WholePlant",NA
+"flower meristems",6,"Flower","Reproductive","Above",NA
+"root tissue",6,"Root","Root","Below",NA
+"Guard cell",6,NA,NA,NA,NA
+"Aerial parts of seedlings",6,"Seedling","WholePlant","WholePlant","Yes"
+"14 day-old seedlings",6,"Seedling","WholePlant","WholePlant",NA
+"inflorescence stem",6,NA,NA,NA,NA
+"stem base",6,NA,NA,NA,NA
+"4PGD seedlings",6,"Seedling","WholePlant","WholePlant",NA
+"seeding",6,NA,NA,NA,NA
+"inflorescence meristems",6,NA,NA,NA,NA
+"10 day old roots",6,NA,NA,NA,NA
+"seeds",6,"Seed","Reproductive",NA,NA
+"Primary inflorescence of shoot apices",6,NA,NA,NA,NA
+"second true leaf",6,NA,NA,NA,NA
+"leaf midrib",6,NA,NA,NA,NA
+"14day seedlings",6,"Seedling","WholePlant","WholePlant",NA
+"cultured cell line MM2d",6,NA,NA,NA,NA
+"first true leaf",6,NA,NA,NA,NA
+"shoot axis apex",6,NA,NA,NA,NA
+"Floral buds",6,NA,NA,NA,NA
+"14 day-old seedling",6,"Seedling","WholePlant","WholePlant",NA
+"gynoecium",6,NA,NA,NA,NA
+"inflorescence meristems and flowers",6,NA,NA,NA,NA
+"root stele cells",5,NA,NA,NA,NA
+"Isolated anthers",5,NA,NA,NA,NA
+"Cotyledons + SAM",5,NA,NA,NA,NA
+"14DAG seedlings",4,"Seedling","WholePlant","WholePlant",NA
+"12DAG seedlings",4,"Seedling","WholePlant","WholePlant",NA
+"leaf phloem",4,"Vasculature","Vegetative","Above",NA
+"12-day old seedlings",4,"Seedling","WholePlant","WholePlant",NA
+"cauline leaf",4,"Leaf","Vegetative","Above",NA
+"apical tissue and leaves",4,NA,NA,NA,NA
+"imbibed seeds",4,"Seed","Reproductive",NA,NA
+"cotyledons and hypocotyls",4,NA,NA,NA,NA
+"stem cell (CLV3+)",4,NA,NA,NA,NA
+"Whole plant",4,"WholePlant","WholePlant","WholePlant",NA
+"Roots",4,"Root","Root","Below",NA
+"SAM meristematic cell (CLV3-)",4,NA,NA,NA,NA
+"whole root of the 8 days old seedling",3,"Seedling","WholePlant","WholePlant","Yes"
+"egg Cell",3,NA,NA,NA,NA
+"Apical cell",3,NA,NA,NA,NA
+"Embryo proper",3,NA,NA,NA,NA
+"Basal cell",3,NA,NA,NA,NA
+"cotyledons",3,"Cotyledon","Vegetative","Above",NA
+"Egg Cell",3,NA,NA,NA,NA
+"roots and hyphae",3,"Root","Root","Below",NA
+"inflorescences and siliques",3,NA,NA,NA,NA
+"mesophyll",2,"Leaf","Vegetative","Above",NA
+"leaves no. 5-6th darkened for 5 days",2,"Leaf","Vegetative","Above",NA
+"Rosette",2,"Leaf","Vegetative","Above",NA
+"root apex",2,"Root","Root","Below",NA
+"Developing seed",2,NA,NA,NA,NA
+"phloem cap",2,"Vasculature","Vegetative","Above",NA
+"mature ovule",2,NA,NA,NA,NA
+"Newly fertilized silique",2,NA,NA,NA,NA
+"meiocytes",2,"Reproductive- Other","Reproductive","Above",NA
+"1-5 days after polination siliques",2,NA,NA,NA,NA
+"entire seeds",2,"Seed","Reproductive",NA,NA
+"pedicel",2,NA,NA,NA,NA
+"pith",2,NA,NA,NA,NA
+"shoot-cotyledon",2,"Cotyledon","Vegetative","Above",NA
+"leaf primordia",2,"Leaf","Vegetative","Above",NA
+"vascular bundle without phloem cap",2,"Vasculature","Vegetative","Above",NA
+"Inflorescence axis",2,"Inflorescence","Reproductive","Above",NA
+"mature leaf",2,"Leaf","Vegetative","Above",NA
+"SAM region and first leaf primordia",2,NA,NA,NA,NA
+"epidermis",2,NA,NA,NA,NA
+"stamen filament",2,"Stamen","Reproductive","Above",NA
+"whole plant 17",1,"WholePlant","WholePlant","WholePlant",NA
+"carpel",1,"Carpel","Reproductive","Above",NA
+"whole plant 27",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 21",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 22",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 44",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 3",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 37",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 33",1,"WholePlant","WholePlant","WholePlant",NA
+"stem node",1,"Shoot","Vegetative","Above",NA
+"whole plant 36",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 14",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 18",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 28",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 19",1,"WholePlant","WholePlant","WholePlant",NA
+"flower pedicel",1,"Flower","Reproductive","Above",NA
+"whole plant 25",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 45",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 12",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 41",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 32",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 6",1,"WholePlant","WholePlant","WholePlant",NA
+"unopened flower buds",1,"Flower","Reproductive","Above",NA
+"mixed shoot apical meristem, cotyledon and first leaves",1,NA,NA,NA,NA
+"stele",1,NA,NA,NA,NA
+"whole plant 31",1,"WholePlant","WholePlant","WholePlant",NA
+"stem internode",1,"Internode","Vegetative","Above",NA
+"whole plant 40",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 24",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 29",1,"WholePlant","WholePlant","WholePlant",NA
+"whole above ground seedling",1,"Seedling","WholePlant","WholePlant","Yes"
+"whole plant 30",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 39",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 35",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 2",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 15",1,"WholePlant","WholePlant","WholePlant",NA
+"fruit valve",1,NA,NA,NA,NA
+"whole plant 26",1,"WholePlant","WholePlant","WholePlant",NA
+"embryonic/ovule (CLV3-)",1,NA,NA,NA,NA
+"basal (= proximal) halves of fully expanded leaves",1,"Leaf","Vegetative","Above",NA
+"whole above ground seedling nuclei",1,"Seedling","WholePlant","WholePlant","Yes"
+"7DAG seedlings",1,"Seedling","WholePlant","WholePlant",NA
+"whole plant 34",1,"WholePlant","WholePlant","WholePlant",NA
+"adult vascular leaf",1,"Leaf","Vegetative","Above",NA
+"whole plant 23",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 20",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 8",1,"WholePlant","WholePlant","WholePlant",NA
+"petiole",1,"Petiole","Vegetative","Above",NA
+"whole plant 7",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 1",1,"WholePlant","WholePlant","WholePlant",NA
+"Seed",1,"Seed","Reproductive","Seed",NA
+"whole plant 4",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 5",1,"WholePlant","WholePlant","WholePlant",NA
+"root cap cells",1,NA,NA,NA,NA
+"whole plant 13",1,"WholePlant","WholePlant","WholePlant",NA
+"leaves and root",1,NA,NA,NA,NA
+"whole plant 9",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 38",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 11",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 10",1,"WholePlant","WholePlant","WholePlant",NA
+"root and shoot",1,NA,NA,NA,NA
+"cortex",1,NA,NA,NA,NA
+"whole plant 16",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 43",1,"WholePlant","WholePlant","WholePlant",NA
+"whole plant 42",1,"WholePlant","WholePlant","WholePlant",NA
