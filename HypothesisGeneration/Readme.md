@@ -17,4 +17,4 @@ Our class presentation is located <a href = 'https://docs.google.com/presentatio
 
 Our classification files are located in the data folder
 
-Our Jupyter notebook is located here
+Our Jupyter notebook contains information about our process in communicating with groups, proposing hypotheses, results from the class poll, and information about classifying tissues as tissue types, reproductive/vegetative, and above/below. Here is the Jupyter notebook: [Hypothesis_Group_Notes.ipynb](Hypothesis_Group_Notes.ipynb)
