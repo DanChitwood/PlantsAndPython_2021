@@ -20,7 +20,7 @@ Main: folder contains all files related to the full dataset
 
 	UMAP_All_SLURM : SLURM submission script for UMAP_All.py (downloaded from UMAP_All.ipynb)
 
-	Figures: folder contains all figures produced from analyses of full dataset
+	Figures: folder contains all figures produced from analyses of full dataset, in subfolders for the v1 and v2 datasets
 	key to file names:
 		TissueType/AboveBelow/VegRepro = color categorization
 		10/30 = n_neighbors parameter
